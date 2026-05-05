@@ -1,3 +1,7 @@
 export default Home = () => {
-  return <h1>Home!</h1>;
+  return (
+    <>
+      <div className="head">ao</div>
+    </>
+  );
 };
