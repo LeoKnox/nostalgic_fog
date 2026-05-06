@@ -16,3 +16,10 @@
   background-color: gray;
   margin-left: auto;
 }
+
+.main {
+  color: yellow;
+  background-color: slateblue;
+  width: 80%;
+  height: 200px;
+}
