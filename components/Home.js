@@ -5,6 +5,8 @@ export default Home = () => {
         ao
         <div className="navbar">Home</div>
       </div>
+      <div className="main">Main</div>
+      <div className="side">side</div>
     </>
   );
 };
