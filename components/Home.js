@@ -19,7 +19,7 @@ export default Home = () => {
         <div className="side">side</div>
       </div>
       <div className="inventory">
-        <div>
+        <div className="inventoryNav">
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
         </div>
