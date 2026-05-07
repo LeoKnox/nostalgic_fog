@@ -2,8 +2,9 @@ import { useState } from "react";
 import WeaponDisplay from "./WeaponDisplay.js";
 
 export default Home = () => {
+  const [currentView, setCurrentView] = useState("weapons");
   const view = {
-    WeaponDisplay: <WeaponDisplay />,
+    weapons: <WeaponDisplay />,
   };
   return (
     <>
@@ -15,7 +16,7 @@ export default Home = () => {
         <div className="board">board</div>
         <div className="side">side</div>
       </div>
-      {view["WeaponDisplay"]}
+      {view[currentView]}
     </>
   );
 };
