@@ -21,8 +21,8 @@
   color: yellow;
   background-color: slateblue;
   display: flex;
-width: 90%;
-margin: auto;
+  width: 90%;
+  margin: auto;
   height: 200px;
 }
 
@@ -32,6 +32,9 @@ margin: auto;
 
 .side {
   flex: 2;
-
   background-color: blue;
+}
+
+.inventoryNav {
+  margin-left: auto;
 }
