@@ -1,10 +1,12 @@
 import { useState } from "react";
+import ArmorDisplay from "./ArmorDisplay.js";
 import WeaponDisplay from "./WeaponDisplay.js";
 
 export default Home = () => {
-  const [currentView, setCurrentView] = useState("weapons");
+  const [currentView, setCurrentView] = useState("armor");
   const view = {
     weapons: <WeaponDisplay />,
+    armor: <ArmorDisplay />,
   };
   return (
     <>
