@@ -20,7 +20,9 @@ export default Home = () => {
       </div>
       <div className="inventory">
         <div>
-          <button>Weapon</button>
+          <button onClick={() => setCurrentView(view["weapons"])}>
+            Weapon
+          </button>
           <button>Armor</button>
         </div>
         {view[currentView]}
