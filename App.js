@@ -1,10 +1,14 @@
-import "./styles.css";
-import Home from "./components/Home.js";
-
-export default function App() {
+export default Home = () => {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <>
+      <div className="head">
+        ao
+        <div className="navbar">Home</div>
+      </div>
+      <div className="main">
+        <div className="board">board</div>
+        <div className="side">side</div>
+      </div>
+    </>
   );
-}
+};
