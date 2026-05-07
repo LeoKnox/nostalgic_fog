@@ -16,7 +16,13 @@ export default Home = () => {
         <div className="board">board</div>
         <div className="side">side</div>
       </div>
-      {view[currentView]}
+      <div className="inventory">
+        <div>
+          <button>Weapon</button>
+          <button>Armor</button>
+        </div>
+        {view[currentView]}
+      </div>
     </>
   );
 };
