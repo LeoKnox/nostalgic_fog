@@ -21,7 +21,8 @@
   color: yellow;
   background-color: slateblue;
   display: flex;
-
+width: 90%;
+margin: auto;
   height: 200px;
 }
 
