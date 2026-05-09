@@ -1,6 +1,9 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  min-height: 100vh;
+display: flex;
+  flex-direction: column;
 }
 
 .head {
@@ -21,9 +24,8 @@
   color: yellow;
   background-color: slateblue;
   display: flex;
-  width: 90%;
+  flex-grow: 1;
   margin: auto;
-  min-height: 100vh;
 }
 
 .board {
