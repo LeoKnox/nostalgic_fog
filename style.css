@@ -40,6 +40,6 @@
 
 .inventoryNav {
   margin-left: auto;
-  height: 100px;
+  height: auto;
   background-color: lightblue;
 }
