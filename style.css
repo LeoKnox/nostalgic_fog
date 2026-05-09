@@ -22,7 +22,7 @@
   background-color: slateblue;
   display: flex;
   width: 90%;
-  overflow: auto;
+  height: 100%;
   margin: auto;
   height: 200px;
 }
