@@ -21,15 +21,14 @@
   color: yellow;
   background-color: slateblue;
   display: flex;
-  flex-direction: column;
   width: 90%;
-  height: 100vh;
   margin: auto;
   height: 200px;
 }
 
 .board {
   width: 70%;
+  height: 100%;
 }
 
 .side {
