@@ -23,12 +23,11 @@
   display: flex;
   width: 90%;
   margin: auto;
-  height: 200px;
+  min-height: 100vh;
 }
 
 .board {
   width: 70%;
-  height: 100%;
 }
 
 .side {
