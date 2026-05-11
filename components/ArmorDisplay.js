@@ -1,4 +1,4 @@
-export default ArmorDisplay = () => ({ closeOverlay }) => {
+export default ArmorDisplay = ({ closeOverlay }) => {
   return (
     <div className="overlay_display">
       <button onClick={() => closeOverlay(null)}>Close</button>
