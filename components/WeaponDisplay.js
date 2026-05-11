@@ -1,6 +1,8 @@
-export default WeaponDisplay = () => {
-  return <div className="overlay_display">
-    <button>Close</button>
-    <label>Weapon Display</label>
-  </div>;
+export default WeaponDisplay = (closeOverlay) => {
+  return (
+    <div className="overlay_display">
+      <button onClick={() => closeOverlay(null)}>Close</button>
+      <label>Weapon Display</label>
+    </div>
+  );
 };
