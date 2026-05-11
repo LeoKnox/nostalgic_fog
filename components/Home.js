@@ -4,6 +4,7 @@ import WeaponDisplay from "./WeaponDisplay.js";
 
 export default Home = () => {
   const [currentView, setCurrentView] = useState(null);
+  const [characterPosition, setCharacterPosition] = useState({x:1,y:1});
   const view = {
     weapons: <WeaponDisplay closeOverlay={setCurrentView} />,
     armor: <ArmorDisplay closeOverlay={setCurrentView} />,
@@ -15,7 +16,8 @@ export default Home = () => {
         <div className="navbar">Home</div>
       </div>
       <div className="main">
-        <div className="board">board</div>
+        <div className="board"><p>board</p>
+        <p>X:{characterPosition.x} Y:{characterPosition.y}</p></div>
         {view[currentView]}
       </div>
       <div className="inventory">
