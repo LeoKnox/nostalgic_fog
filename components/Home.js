@@ -3,7 +3,7 @@ import ArmorDisplay from "./ArmorDisplay.js";
 import WeaponDisplay from "./WeaponDisplay.js";
 
 export default Home = () => {
-  const [currentView, setCurrentView] = useState("armor");
+  const [currentView, setCurrentView] = useState("");
   const view = {
     weapons: <WeaponDisplay />,
     armor: <ArmorDisplay />,
@@ -22,7 +22,6 @@ export default Home = () => {
         <div className="inventoryNav">
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
-          
         </div>
       </div>
     </>
