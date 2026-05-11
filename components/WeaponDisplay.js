@@ -1,3 +1,3 @@
 export default WeaponDisplay = () => {
-  return <p>Weapon Display</p>;
+  return <p className="overlay_display">Weapon Display</p>;
 };
