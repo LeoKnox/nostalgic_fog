@@ -44,3 +44,7 @@
   background-color: lightblue;
   padding: 5vmin;
 }
+
+.overlay_display {
+  position: relative;
+}
