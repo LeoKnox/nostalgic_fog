@@ -3,10 +3,10 @@ import ArmorDisplay from "./ArmorDisplay.js";
 import WeaponDisplay from "./WeaponDisplay.js";
 
 export default Home = () => {
-  const [currentView, setCurrentView] = useState("");
+  const [currentView, setCurrentView] = useState(null);
   const view = {
-    weapons: <WeaponDisplay />,
-    armor: <ArmorDisplay />,
+    weapons: <WeaponDisplay closeOverlay={setCurrentView} />,
+    armor: <ArmorDisplay closeOverlay={setCurrentView} />,
   };
   return (
     <>
