@@ -12,8 +12,8 @@ export default Home = () => {
 
   const keyBoardUse = () => {
     if (event.key === "ArrowLeft") {
-      temp = { ...characterPosition };
-      //temp.y = temp.y + 1;
+      temp = characterPosition;
+      temp.y = temp.y + 1;
       setCharacterPosition(temp);
     } else if (event.key === "ArrowRight") {
       onRight();
