@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ArmorDisplay from "./ArmorDisplay.js";
 import WeaponDisplay from "./WeaponDisplay.js";
 
@@ -11,14 +11,16 @@ export default Home = () => {
   };
 
   const keyBoardUse = () => {
-    setCharacterPosition(temp);
-    if (event.key === "ArrowLeft") {
-      let temp = { ...characterPosition, y: characterPosition.y + 1 };
+    useEffect(() => {
       setCharacterPosition(temp);
-    } else if (event.key === "ArrowRight") {
-      let temp = { ...characterPosition, y: characterPosition.y + 1 };
-      setCharacterPosition(temp);
-    }
+      if (event.key === "ArrowLeft") {
+        let temp = { ...characterPosition, y: characterPosition.y + 1 };
+        setCharacterPosition(temp);
+      } else if (event.key === "ArrowRight") {
+        let temp = { ...characterPosition, y: characterPosition.y + 1 };
+        setCharacterPosition(temp);
+      }
+    }, []);
   };
   window.addEventListener("keydown", keyBoardUse);
   return (
