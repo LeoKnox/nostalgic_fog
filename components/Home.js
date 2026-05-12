@@ -10,7 +10,7 @@ export default Home = () => {
     armor: <ArmorDisplay closeOverlay={setCurrentView} />,
   };
 
-  const keyBoardUse = () => {
+  const keyBoardUse = (event) => {
     useEffect(() => {
       setCharacterPosition(temp);
       if (event.key === "ArrowLeft") {
@@ -22,7 +22,7 @@ export default Home = () => {
       }
     }, []);
   };
-  window.addEventListener("keydown", keyBoardUse);
+  window.addEventListener("", keyBoardUse);
   return (
     <>
       <div className="head">
