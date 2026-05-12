@@ -12,7 +12,7 @@ export default Home = () => {
 
   const keyBoardUse = () => {
     if (event.key === "ArrowLeft") {
-      temp = { ...characterPosition, y: charactPosition.y + 1 };
+      temp = { ...characterPosition, y: characterPosition.y + 1 };
 
       setCharacterPosition(temp);
     } else if (event.key === "ArrowRight") {
