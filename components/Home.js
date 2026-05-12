@@ -42,7 +42,7 @@ export default Home = () => {
         <div className="inventoryNav">
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
-          <button onClick={() => keyBoardUse()}>move</button>
+          <button onClick={(event) => keyBoardUse(event)}>move</button>
         </div>
       </div>
     </>
