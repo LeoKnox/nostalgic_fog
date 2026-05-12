@@ -11,15 +11,13 @@ export default Home = () => {
   };
 
   const keyBoardUse = () => {
-    //temp = { ...characterPosition, y: characterPosition.y + 1 };
-
     setCharacterPosition(temp);
     if (event.key === "ArrowLeft") {
       let temp = { ...characterPosition, y: characterPosition.y + 1 };
-
       setCharacterPosition(temp);
     } else if (event.key === "ArrowRight") {
-      onRight();
+      let temp = { ...characterPosition, y: characterPosition.y + 1 };
+      setCharacterPosition(temp);
     }
   };
   window.addEventListener("keydown", keyBoardUse);
