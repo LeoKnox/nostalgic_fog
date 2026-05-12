@@ -11,8 +11,11 @@ export default Home = () => {
   };
 
   const keyBoardUse = () => {
+    temp = { ...characterPosition, y: characterPosition.y + 1 };
+    setCharacterPosition(temp);
     if (event.key === "ArrowLeft") {
-      [{ ...characterPosition, y: y + 1 }];
+      temp = { ...characterPosition, y: y + 1 };
+      setCharacterPosition(temp);
     } else if (event.key === "ArrowRight") {
       onRight();
     }
