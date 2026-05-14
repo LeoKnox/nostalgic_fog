@@ -11,18 +11,19 @@ export default Home = () => {
   };
 
   const keyBoardUse = (event) => {
-    useEffect(() => {
-      let temp = { ...characterPosition, y: characterPosition.y + 1 };
+    //useEffect(() => {
+    let temp = { ...characterPosition, y: characterPosition.y + 1 };
 
+    setCharacterPosition(temp);
+    if (event.key === "ArrowLeft") {
+      let temp = { ...characterPosition, y: characterPosition.y + 1 };
       setCharacterPosition(temp);
-      if (event.key === "ArrowLeft") {
-        let temp = { ...characterPosition, y: characterPosition.y + 1 };
-        setCharacterPosition(temp);
-      } else if (event.key === "ArrowRight") {
-        let temp = { ...characterPosition, y: characterPosition.y + 1 };
-        setCharacterPosition(temp);
-      }
-    }, [keyBoardUse]);
+    } else if (event.key === "ArrowRight") {
+      let temp = { ...characterPosition, y: characterPosition.y + 1 };
+      setCharacterPosition(temp);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+    //}, [keyBoardUse]);
   };
   window.addEventListener("keydown", keyBoardUse);
   return (
