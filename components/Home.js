@@ -16,7 +16,7 @@ export default Home = () => {
 
     setCharacterPosition(temp);
     if (event.key === "ArrowLeft") {
-      let temp = { ...characterPosition, y: characterPosition.y + 1 };
+      let temp = { ...characterPosition, y: characterPosition.y - 1 };
       setCharacterPosition(temp);
     } else if (event.key === "ArrowRight") {
       let temp = { ...characterPosition, y: characterPosition.y + 1 };
