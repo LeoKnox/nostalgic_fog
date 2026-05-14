@@ -22,7 +22,7 @@ export default Home = () => {
         let temp = { ...characterPosition, y: characterPosition.y + 1 };
         setCharacterPosition(temp);
       }
-    }, []);
+    }, [setCharacterPosition]);
   };
   window.addEventListener("keydown", keyBoardUse);
   return (
