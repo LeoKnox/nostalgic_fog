@@ -5,7 +5,12 @@ import WeaponDisplay from "./WeaponDisplay.js";
 export default Home = () => {
   const [currentView, setCurrentView] = useState(null);
   const [characterPosition, setCharacterPosition] = useState({ x: 1, y: 1 });
-  const [currentRoom, setCurrentRoom] = useState({ width: 5, length: 5 });
+  const [currentRoom, setCurrentRoom] = useState({
+    id: 1,
+    width: 5,
+    length: 5,
+    connectedRooms: [2, 3],
+  });
   const view = {
     weapons: <WeaponDisplay closeOverlay={setCurrentView} />,
     armor: <ArmorDisplay closeOverlay={setCurrentView} />,
