@@ -47,6 +47,7 @@ export default Home = () => {
           <p>
             width:{currentRoom.width} length:{currentRoom.length}
           </p>
+          <p>{currentRoom.connectedRooms}</p>
         </div>
         {view[currentView]}
       </div>
