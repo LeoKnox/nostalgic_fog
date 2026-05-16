@@ -2,6 +2,20 @@ progress {
   accent-color: red;
 }
 
+.armorClass {
+  width: 200px;
+  height: 200px;
+  background: #5585cc;
+  clip-path: polygon(
+    50% 0%,
+    98% 35%,
+    79% 91%,
+    21% 91%,
+    2% 35%,
+    50% 0%
+  );
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
