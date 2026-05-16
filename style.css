@@ -9,7 +9,7 @@ progress {
   width: 180px;
   height: 180px;
   background: #5585cc;
-
+  opacity: 60%;
   clip-path: polygon(50% 0%, 98% 35%, 79% 91%, 21% 91%, 2% 35%, 50% 0%);
 }
 
@@ -20,6 +20,7 @@ progress {
   height: 200px;
   background: #132746;
   clip-path: circle();
+  clip-path: square();
 }
 
 .App {
