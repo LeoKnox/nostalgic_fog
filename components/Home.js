@@ -57,11 +57,11 @@ export default Home = () => {
       </div>
       <div className="inventory">
         <div className="inventoryNav">
+          HP:{" "}
           <progress
             value={currentCharacter.currhp}
             max={currentCharacter.maxhp}
           ></progress>
-
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
         </div>
