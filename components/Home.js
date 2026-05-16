@@ -65,6 +65,9 @@ export default Home = () => {
           <div className="acParent">
             <div className="acBackground"></div>
             <div className="armorClass"></div>
+            <svg width="100" height="100">
+  <rect width="100" height="100" fill="blue" />
+</svg>
           </div>
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
