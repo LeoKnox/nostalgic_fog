@@ -1,5 +1,5 @@
-progress[value="50"]::-webkit-progress-value {
-  background-color: orange;
+.high-progress {
+  accent-color: red;
 }
 
 .App {
