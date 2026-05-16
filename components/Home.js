@@ -5,7 +5,10 @@ import WeaponDisplay from "./WeaponDisplay.js";
 export default Home = () => {
   const [currentView, setCurrentView] = useState(null);
   const [characterPosition, setCharacterPosition] = useState({ x: 1, y: 1 });
-  const [currentCharacter, setCurrentCharacter] = useState({ hp: 50 });
+  const [currentCharacter, setCurrentCharacter] = useState({
+    currhp: 38,
+    maxhp: 50,
+  });
   const [currentRoom, setCurrentRoom] = useState({
     id: 1,
     width: 5,
@@ -54,7 +57,10 @@ export default Home = () => {
       </div>
       <div className="inventory">
         <div className="inventoryNav">
-          <progress max={currentCharacter.hp}></progress>
+          <progress
+            value={currentCharacter.currhp}
+            max={currentCharacter.maxhp}
+          ></progress>
 
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
