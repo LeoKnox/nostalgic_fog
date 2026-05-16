@@ -1,14 +1,15 @@
 progress {
   accent-color: red;
 }
-
+.acParent {
+  display: grid;
+  place-items: center;
+}
 .armorClass {
   width: 180px;
   height: 180px;
   background: #5585cc;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   clip-path: polygon(50% 0%, 98% 35%, 79% 91%, 21% 91%, 2% 35%, 50% 0%);
 }
 
