@@ -1,3 +1,7 @@
+progress[value="50"]::-webkit-progress-value {
+  background-color: orange;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
