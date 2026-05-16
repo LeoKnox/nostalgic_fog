@@ -53,8 +53,9 @@ export default Home = () => {
         {view[currentView]}
       </div>
       <div className="inventory">
-        {currentCharacter.hp}
         <div className="inventoryNav">
+          <progress max={currentCharacter.hp}></progress>
+
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
         </div>
