@@ -3,17 +3,19 @@ progress {
 }
 
 .armorClass {
+  width: 180px;
+  height: 180px;
+  background: #5585cc;
+  clip-path: polygon(50% 0%, 98% 35%, 79% 91%, 21% 91%, 2% 35%, 50% 0%);
+}
+
+.acBackground {
+  position:absolute;
+
   width: 200px;
   height: 200px;
-  background: #5585cc;
-  clip-path: polygon(
-    50% 0%,
-    98% 35%,
-    79% 91%,
-    21% 91%,
-    2% 35%,
-    50% 0%
-  );
+  background: #132746;
+  clip-path: circle();
 }
 
 .App {
