@@ -5,6 +5,7 @@ import WeaponDisplay from "./WeaponDisplay.js";
 export default Home = () => {
   const [currentView, setCurrentView] = useState(null);
   const [characterPosition, setCharacterPosition] = useState({ x: 1, y: 1 });
+  const [currentCharacter, setCurrentCharacter] = useState({ hp: 50 });
   const [currentRoom, setCurrentRoom] = useState({
     id: 1,
     width: 5,
@@ -52,6 +53,7 @@ export default Home = () => {
         {view[currentView]}
       </div>
       <div className="inventory">
+        {currentCharacter.hp}
         <div className="inventoryNav">
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
