@@ -62,7 +62,10 @@ export default Home = () => {
             value={currentCharacter.currhp}
             max={currentCharacter.maxhp}
           ></progress>
-          <div class="armorClass"></div>
+          <div>
+            <div class="acBackground"></div>
+            <div class="armorClass"></div>
+          </div>
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
         </div>
