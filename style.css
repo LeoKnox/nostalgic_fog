@@ -6,12 +6,12 @@ progress {
   place-items: center;
 }
 .armorClass {
-  top:0,
-        position: 'absolute',
-        width:300,
-        height:300,
-        borderRadius: 150,
-        backgroundColor: white
+  top:0;
+        
+        width:300;
+        height:300;
+        
+        backgroundColor: white;
       }
 
 .acBackground {
