@@ -63,11 +63,9 @@ export default Home = () => {
             max={currentCharacter.maxhp}
           ></progress>
           <div className="acParent">
-            <div className="acBackground"></div>
-            <div className="armorClass"></div>
             <svg width="100" height="100">
-  <rect width="100" height="100" fill="blue" />
-</svg>
+              <circle cx="80" cy="80" r="60" fill="red" />
+            </svg>
           </div>
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
