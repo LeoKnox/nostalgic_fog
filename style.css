@@ -5,7 +5,7 @@ progress {
   display: grid;
   place-items: center;
   width: 200px;
-  height: 200px;
+  height: 100vh;
 }
 .armorClass {
   top: 0;
