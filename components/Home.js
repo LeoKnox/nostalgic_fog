@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Acimage from "./Acimage.js";
 import ArmorDisplay from "./ArmorDisplay.js";
 import WeaponDisplay from "./WeaponDisplay.js";
 
@@ -63,7 +64,7 @@ export default Home = () => {
             max={currentCharacter.maxhp}
           ></progress>
           <div className="acParent">
-            <div className="armorClass">white</div>
+            <Acimage />
           </div>
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
