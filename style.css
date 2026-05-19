@@ -2,14 +2,11 @@ progress {
   accent-color: red;
 }
 .acParent {
-  top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 .acParent svg {
   width: 200px;
