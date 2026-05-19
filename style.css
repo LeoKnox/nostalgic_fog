@@ -2,10 +2,11 @@ progress {
   accent-color: red;
 }
 .acParent {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
+  display: grid;
+  place-items: center;
+  width: 200px;
+  height: 200px;
+}
 .armorClass {
   top: 0;
 
