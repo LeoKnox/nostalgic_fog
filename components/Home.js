@@ -9,6 +9,7 @@ export default Home = () => {
   const [currentCharacter, setCurrentCharacter] = useState({
     currhp: 38,
     maxhp: 50,
+    ac: 10,
   });
   const [currentRoom, setCurrentRoom] = useState({
     id: 1,
@@ -63,9 +64,7 @@ export default Home = () => {
             value={currentCharacter.currhp}
             max={currentCharacter.maxhp}
           ></progress>
-          <div className="acParent">
-            <Acimage />
-          </div>
+          <div className="acParent">{currentCharacter.ac}</div>
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
         </div>
