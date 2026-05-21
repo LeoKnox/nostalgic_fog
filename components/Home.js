@@ -34,10 +34,10 @@ export default Home = () => {
       let temp = { ...characterPosition, y: characterPosition.y + 1 };
       setCharacterPosition(temp);
     } else if (event.key === "ArrowUp") {
-      let temp = { ...characterPosition, y: characterPosition.x + 1 };
+      let temp = { ...characterPosition, y: characterPosition.x - 1 };
       setCharacterPosition(temp);
     } else if (event.key === "ArrowDown") {
-      let temp = { ...characterPosition, y: characterPosition.x - 1 };
+      let temp = { ...characterPosition, y: characterPosition.x + 1 };
       setCharacterPosition(temp);
     }
     return () => window.removeEventListener("keydown", handleKeyDown);
