@@ -34,6 +34,13 @@ export default Home = () => {
       let temp = { ...characterPosition, y: characterPosition.y + 1 };
       setCharacterPosition(temp);
     }
+    if (event.key === "ArrowUp") {
+      let temp = { ...characterPosition, y: characterPosition.x + 1 };
+      setCharacterPosition(temp);
+    } else if (event.key === "ArrowDown") {
+      let temp = { ...characterPosition, y: characterPosition.x - 1 };
+      setCharacterPosition(temp);
+    }
     return () => window.removeEventListener("keydown", handleKeyDown);
     //}, [keyBoardUse]);
   };
@@ -50,6 +57,7 @@ export default Home = () => {
           <p>
             X:{characterPosition.x} Y:{characterPosition.y}
           </p>
+          <label>room</label>
           <p>
             width:{currentRoom.width} length:{currentRoom.length}
           </p>
