@@ -23,7 +23,7 @@ export default Home = () => {
   };
 
   const keyBoardUse = (event) => {
-    //useEffect(() => {
+    useEffect(() => {
     let temp = { ...characterPosition };
 
     setCharacterPosition(temp);
@@ -45,7 +45,7 @@ export default Home = () => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-    //}, [keyBoardUse]);
+    }, []);
   };
   window.addEventListener("keydown", keyBoardUse);
   return (
