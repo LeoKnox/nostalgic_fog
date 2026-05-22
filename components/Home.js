@@ -41,13 +41,14 @@ export default Home = () => {
       setCharacterPosition(temp);
     }
 
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    //return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
     }, []);
   };
-  window.addEventListener("keydown", keyBoardUse);
+  //window.addEventListener("keydown", keyBoardUse);
   return (
     <>
       <div className="head">
