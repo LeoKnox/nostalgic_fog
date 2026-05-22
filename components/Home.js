@@ -26,7 +26,7 @@ export default Home = () => {
     //useEffect(() => {
     let temp = { ...characterPosition };
 
-    //setCharacterPosition(temp);
+    setCharacterPosition(temp);
     if (event.key === "ArrowLeft") {
       let temp = { ...characterPosition, y: characterPosition.y - 1 };
       setCharacterPosition(temp);
@@ -42,6 +42,9 @@ export default Home = () => {
     }
 
     return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
     //}, [keyBoardUse]);
   };
   window.addEventListener("keydown", keyBoardUse);
