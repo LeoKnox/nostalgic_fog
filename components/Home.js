@@ -33,14 +33,13 @@ export default Home = () => {
     } else if (event.key === "ArrowRight") {
       let temp = { ...characterPosition, y: characterPosition.y + 1 };
       setCharacterPosition(temp);
-    }
-    if (event.key === "ArrowUp") {
+    } else if (event.key === "ArrowUp") {
       let temp = { ...characterPosition, x: characterPosition.x - 1 };
       setCharacterPosition(temp);
     } else if (event.key === "ArrowDown") {
       let temp = { ...characterPosition, x: characterPosition.x + 1 };
-      setCharacterPosition(temp);
     }
+    setCharacterPosition(temp);
     return () => window.removeEventListener("keydown", handleKeyDown);
     //}, [keyBoardUse]);
   };
