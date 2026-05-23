@@ -70,9 +70,9 @@ export default Home = () => {
         {view[currentView]}
       </div>
       <div className="inventory">
-      
         <div className="inventoryNav">
         {view[currentView]}
+
           HP:{" "}
           <progress
             value={currentCharacter.currhp}
