@@ -1,86 +1,94 @@
-import { useState, useEffect } from "react";
-import Acimage from "./Acimage.js";
-import ArmorDisplay from "./ArmorDisplay.js";
-import WeaponDisplay from "./WeaponDisplay.js";
+progress {
+  accent-color: red;
+}
+.acParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+}
+.acParent svg {
+  width: 200px;
+  height: 200px;
+}
+.armorClass {
+  top: 0;
 
-export default Home = () => {
-  const [currentView, setCurrentView] = useState(null);
-  const [characterPosition, setCharacterPosition] = useState({ x: 1, y: 1 });
-  const [currentCharacter, setCurrentCharacter] = useState({
-    currhp: 38,
-    maxhp: 50,
-    ac: 10,
-  });
-  const [currentRoom, setCurrentRoom] = useState({
-    id: 1,
-    width: 5,
-    length: 5,
-    connectedRooms: [2, 3],
-  });
-  const view = {
-    weapons: <WeaponDisplay closeOverlay={setCurrentView} />,
-    armor: <ArmorDisplay closeOverlay={setCurrentView} />,
-  };
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+}
 
-  const keyBoardUse = (event) => {
-    useEffect(() => {
-    let atemp = { ...characterPosition };
+.acBackground {
+  position: absolute;
 
-    setCharacterPosition(temp);
-    if (event.key === "ArrowLeft") {
-      let temp = { ...characterPosition, y: characterPosition.y - 1 };
-      setCharacterPosition(temp);
-    } else if (event.key === "ArrowRight") {
-      let temp = { ...characterPosition, y: characterPosition.y + 1 };
-      setCharacterPosition(temp);
-    } else if (event.key === "ArrowUp") {
-      let temp = { ...characterPosition, x: characterPosition.x - 1 };
-      setCharacterPosition(temp);
-    } else if (event.key === "ArrowDown") {
-      let temp = { ...characterPosition, x: characterPosition.x + 1 };
-      setCharacterPosition(temp);
-    }
+  width: 200px;
+  height: 200px;
+  background: #132746;
+  clip-path: circle();
+  clip-path: square();
+}
 
-    //return () => window.removeEventListener("keydown", handleKeyDown);
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-    }, []);
-  };
-  //window.addEventListener("keydown", keyBoardUse);
-  return (
-    <>
-      <div className="head">
-        ao
-        <div className="navbar">Home</div>
-      </div>
-      <div className="main">
-        <div className="board">
-          <p>board</p>
-          <p>
-            X:{characterPosition.x} Y:{characterPosition.y}
-          </p>
-          <label>room</label>
-          <p>
-            width:{currentRoom.width} length:{currentRoom.length}
-          </p>
-          <p>{currentRoom.connectedRooms}</p>
-        </div>
-        {view[currentView]}
-      </div>
-      <div className="inventory">
-        <div className="inventoryNav">
-          HP:{" "}
-          <progress
-            value={currentCharacter.currhp}
-            max={currentCharacter.maxhp}
-          ></progress>
-          <div className="acParent">{currentCharacter.ac}</div>
-          <button onClick={() => setCurrentView("weapons")}>Weapon</button>
-          <button onClick={() => setCurrentView("armor")}>Armor</button>
-        </div>
-      </div>
-    </>
-  );
-};
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  background-color: lightblue;
+}
+
+.navbar {
+  width: 100px;
+  padding: 10px;
+  background-color: gray;
+  margin-left: auto;
+}
+
+.main {
+  color: yellow;
+  background-color: slateblue;
+  display: flex;
+  flex-grow: 1;
+  width: 90%;
+  margin: auto;
+}
+
+.board {
+  width: 70%;
+}
+
+.side {
+  flex: 2;
+  background-color: blue;
+}
+
+.inventoryNav {
+  margin-left: auto;
+  height: auto;
+  background-color: lightblue;
+  padding: 5vmin;
+}
+
+.overlay_display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
