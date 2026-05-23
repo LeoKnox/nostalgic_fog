@@ -1,7 +1,6 @@
 export default WeaponDisplay = ({ closeOverlay }) => {
   return (
-    <div className="overlay_display">
-      <button onClick={() => closeOverlay(null)}>Close</button>
+    <div onClick={() => closeOverlay(null)} className="overlay_display">
       <label>Weapon Display</label>
     </div>
   );
