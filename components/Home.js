@@ -24,7 +24,7 @@ export default Home = () => {
 
   const keyBoardUse = (event) => {
     useEffect(() => {
-    let temp = { ...characterPosition };
+    let atemp = { ...characterPosition };
 
     setCharacterPosition(temp);
     if (event.key === "ArrowLeft") {
