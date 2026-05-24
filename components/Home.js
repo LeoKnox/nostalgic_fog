@@ -67,7 +67,7 @@ export default Home = () => {
           </p>
           <p>{currentRoom.connectedRooms}</p>
         </div>
-        {view[currentView]}
+
       </div>
       <div className="inventory">
         <div className="inventoryNav">
