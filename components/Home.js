@@ -24,8 +24,6 @@ export default Home = () => {
 
   const keyBoardUse = (event) => {
     useEffect(() => {
-    //let atemp = { ...characterPosition };
-
     setCharacterPosition(temp);
     if (event.key === "ArrowLeft") {
       let temp = { ...characterPosition, y: characterPosition.y - 1 };
@@ -40,15 +38,13 @@ export default Home = () => {
       let temp = { ...characterPosition, x: characterPosition.x + 1 };
       setCharacterPosition(temp);
     }
-
-    //return () => window.removeEventListener("keydown", handleKeyDown);
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
     }, []);
   };
-  //window.addEventListener("keydown", keyBoardUse);
+
   return (
     <>
       <div className="head">
@@ -72,8 +68,6 @@ export default Home = () => {
       <div className="inventory">
         <div className="inventoryNav">
         {view[currentView]}
-
-          HP:{" "}
           <progress
             value={currentCharacter.currhp}
             max={currentCharacter.maxhp}
