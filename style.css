@@ -24,8 +24,8 @@ progress {
 .acBackground {
   position: absolute;
 
-  width: 200px;
-  height: 200px;
+  width: 90vh;
+  height: 90vh;
   background: #132746;
   clip-path: circle();
   clip-path: square();
@@ -43,7 +43,8 @@ progress {
   width: 90%;
   height: auto;
   margin: auto;
-  background-color: lightblue;
+  color: lightgray;
+  background-color: darkblue;
 }
 
 .navbar {
@@ -71,11 +72,16 @@ progress {
   background-color: blue;
 }
 
+.inventory {
+  height: 90%;
+}
+
 .inventoryNav {
   position: relative;
   margin-left: auto;
   height: auto;
-  background-color: lightblue;
+  color: lightgray;
+  background-color: darkblue;
   padding: 5vmin;
 }
 
