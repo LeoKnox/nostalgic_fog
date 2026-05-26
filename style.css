@@ -54,6 +54,7 @@ body {
   width: 100px;
   padding: 10px;
   background-color: gray;
+  z-index: 20;
   margin-left: auto;
 }
 
