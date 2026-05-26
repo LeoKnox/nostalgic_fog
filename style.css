@@ -83,6 +83,7 @@ body {
 .inventoryNav {
   box-shadow: 0 0 10px 5px darkblue;
   border-radius: 15px;
+  border: 5px solid blue;
   margin: 10px;
   position: relative;
   margin-left: auto;
