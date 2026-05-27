@@ -26,6 +26,8 @@ body {
 
 .acBackground {
   position: absolute;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(to bottom right, red, blue, green);
 
   width: 90vh;
   height: 90vh;
