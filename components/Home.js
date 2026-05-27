@@ -1,82 +1,58 @@
-import { useState, useEffect } from "react";
-import Acimage from "./Acimage.js";
-import ArmorDisplay from "./ArmorDisplay.js";
-import WeaponDisplay from "./WeaponDisplay.js";
-
-export default Home = () => {
-  const [currentView, setCurrentView] = useState(null);
-  const [characterPosition, setCharacterPosition] = useState({ x: 1, y: 1 });
-  const [currentCharacter, setCurrentCharacter] = useState({
-    currhp: 38,
-    maxhp: 50,
-    ac: 10,
-  });
-  const [currentRoom, setCurrentRoom] = useState({
-    id: 1,
-    width: 5,
-    length: 5,
-    connectedRooms: [2, 3],
-  });
-  const view = {
-    weapons: <WeaponDisplay closeOverlay={setCurrentView} />,
-    armor: <ArmorDisplay closeOverlay={setCurrentView} />,
-  };
-
-  const keyBoardUse = (event) => {
-    useEffect(() => {
-    setCharacterPosition(temp);
-    if (event.key === "ArrowLeft") {
-      let temp = { ...characterPosition, y: characterPosition.y - 1 };
-      setCharacterPosition(temp);
-    } else if (event.key === "ArrowRight") {
-      let temp = { ...characterPosition, y: characterPosition.y + 1 };
-      setCharacterPosition(temp);
-    } else if (event.key === "ArrowUp") {
-      let temp = { ...characterPosition, x: characterPosition.x - 1 };
-      setCharacterPosition(temp);
-    } else if (event.key === "ArrowDown") {
-      let temp = { ...characterPosition, x: characterPosition.x + 1 };
-      setCharacterPosition(temp);
-    }
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-    }, []);
-  };
-
+export default Acimage = () => {
+  const coords = [[100, 0], [176,35]]
   return (
-    <>
-      <div className="head">
-        ao
-        <div className="navbar">Home</div>
-      </div>
-      <div className="main">
-        <div className="board">
-          <p>board</p>
-          <p>
-            X:{characterPosition.x} Y:{characterPosition.y}
-          </p>
-          <label>room</label>
-          <p>
-            width:{currentRoom.width} length:{currentRoom.length}
-          </p>
-          <p>{currentRoom.connectedRooms}</p>
-        </div>
-
-      </div>
-      <div className="inventory">
-        <div className="inventoryNav">
-        {view[currentView]}
-          <progress
-            value={currentCharacter.currhp}
-            max={currentCharacter.maxhp}
-          ></progress>
-          <div className="acParent">{currentCharacter.ac}</div>
-          <button onClick={() => setCurrentView("weapons")}>Weapon</button>
-          <button onClick={() => setCurrentView("armor")}>Armor</button>
-        </div>
-      </div>
-    </>
+    <svg>
+      {coords.map((point) => (
+        {<line x1="100" y1="100" x2=${point.x} y2="35" />`}
+      ))}
+    </svg>
   );
 };
+/*
+<circle
+        r="100"
+        fill="red"
+        cx="50%"
+        cy="50%"
+        stroke="none"
+        strokeWidth="0"
+      />
+      <circle
+        r="80"
+        cx="50%"
+        cy="50%"
+        stroke="darkred"
+        strokeWidth="4"
+        fill="none"
+      />
+      <circle
+        r="60"
+        cx="50%"
+        cy="50%"
+        stroke="darkred"
+        strokeWidth="4"
+        fill="none"
+      />
+      <circle
+        r="40"
+        cx="50%"
+        cy="50%"
+        stroke="darkred"
+        strokeWidth="4"
+        fill="none"
+      />
+      <polygon
+        points="100,10 155,50 120,128 53,181 24,55"
+        fill="none"
+        stroke="black"
+        stroke-width="4"
+        stroke-linejoin="round"
+      />
+      <g stroke="black" stroke-width="2">
+        <line x1="100" y1="100" x2="100" y2="0" />
+        <line x1="100" y1="100" x2="176" y2="35" />
+        <line x1="100" y1="100" x2="147" y2="181" />
+        <line x1="100" y1="100" x2="53" y2="181" />
+        <line x1="100" y1="100" x2="24" y2="55" />
+      </g>
+      */
