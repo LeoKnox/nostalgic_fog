@@ -1,7 +1,18 @@
 export default Acimage = () => {
+  const coords = [
+    [100, 0],
+    [176, 35],
+  ];
   return (
     <svg>
-      <circle
+      {coords.map((point) => {
+        <p>{point}</p>;
+      })}
+    </svg>
+  );
+};
+/*
+<circle
         r="100"
         fill="red"
         cx="50%"
@@ -47,6 +58,4 @@ export default Acimage = () => {
         <line x1="100" y1="100" x2="53" y2="181" />
         <line x1="100" y1="100" x2="24" y2="55" />
       </g>
-    </svg>
-  );
-};
+      */
