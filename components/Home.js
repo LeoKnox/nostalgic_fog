@@ -3,7 +3,7 @@ export default Acimage = () => {
   return (
     <svg>
       {coords.map((point) => (
-        {<line x1="100" y1="100" x2=${point.x} y2="35" />`}
+        <p>{point}</p>
       ))}
     </svg>
   );
