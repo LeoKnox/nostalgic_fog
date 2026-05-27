@@ -33,7 +33,13 @@ export default Acimage = () => {
         strokeWidth="4"
         fill="none"
       />
-
+      <polygon
+        points="100,10 155,50 120,128 53,181 24,55"
+        fill="none"
+        stroke="black"
+        stroke-width="4"
+        stroke-linejoin="round"
+      />
       <g stroke="black" stroke-width="2">
         <line x1="100" y1="100" x2="100" y2="0" />
         <line x1="100" y1="100" x2="176" y2="35" />
