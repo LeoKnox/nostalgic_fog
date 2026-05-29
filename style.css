@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 250px;
-  height: 250px;
+  height: 10vh;
 }
 .acParent svg {
   width: 200px;
