@@ -62,7 +62,7 @@ export default Home = () => {
             width:{currentRoom.width} length:{currentRoom.length}
           </p>
           {currentRoom.connectedRooms.map((door) =>{
-          <button>{door}</button>
+          <button>+{door}</button>
 })}
         </div>
       </div>
