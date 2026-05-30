@@ -12,12 +12,9 @@ export default Home = () => {
     maxhp: 50,
     ac: 10,
   });
-  const [currentRoom, setCurrentRoom] = useState({
-    id: 1,
-    width: 5,
-    length: 5,
-    connectedRooms: [2, 3],
-  });
+  const [currentRoom, setCurrentRoom] = useState(
+    roomDB(2)
+  );
   const view = {
     weapons: <WeaponDisplay closeOverlay={setCurrentView} />,
     armor: <ArmorDisplay closeOverlay={setCurrentView} />,
