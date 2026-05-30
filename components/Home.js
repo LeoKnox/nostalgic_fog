@@ -56,7 +56,7 @@ export default Home = () => {
             X:{characterPosition.x} Y:{characterPosition.y}
           </p>
           <label>room</label>
-          <p>{currentRoom.id}</p>
+          <p>{currentRoom.connectedRooms}</p>
           <p>
             width:{currentRoom.width} length:{currentRoom.length}
           </p>
