@@ -60,7 +60,7 @@ export default Home = () => {
             width:{currentRoom.width} length:{currentRoom.length}
           </p>
           {currentRoom.connectedRooms.map((door) =>(
-          <button>+{door}</button>
+          <button onClick={()=>setCurrentRoom(roomDB(door))}>+</button>
 ))}
         </div>
       </div>
