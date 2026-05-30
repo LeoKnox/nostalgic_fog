@@ -56,6 +56,7 @@ export default Home = () => {
             X:{characterPosition.x} Y:{characterPosition.y}
           </p>
           <label>room</label>
+          <p>{currentRoom.id}</p>
           <p>
             width:{currentRoom.width} length:{currentRoom.length}
           </p>
@@ -71,7 +72,6 @@ export default Home = () => {
             value={currentCharacter.currhp}
             max={currentCharacter.maxhp}
           ></progress>
-          {roomDB(2).id}
           <div className="acParent">AC <Acimage />{currentCharacter.ac}</div>
           <button onClick={() => setCurrentView("weapons")}>Weapon</button>
           <button onClick={() => setCurrentView("armor")}>Armor</button>
