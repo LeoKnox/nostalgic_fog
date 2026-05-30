@@ -18,3 +18,7 @@ let dungeonDB = {
     connectedRooms: [1],
   },
 };
+
+export const roomDB = (id = 1) => {
+  return dungeonDB[1];
+};
