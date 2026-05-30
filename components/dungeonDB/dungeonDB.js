@@ -19,6 +19,6 @@ let dungeonDB = {
   },
 };
 
-export const roomDB = (id = 1) => {
-  return dungeonDB[1];
+export const roomDB = (roomId = 1) => {
+  return dungeonDB[roomId];
 };
