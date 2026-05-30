@@ -13,7 +13,7 @@ export default Home = () => {
     ac: 10,
   });
   const [currentRoom, setCurrentRoom] = useState(
-    roomDB(2)
+    roomDB(1)
   );
   const view = {
     weapons: <WeaponDisplay closeOverlay={setCurrentView} />,
@@ -56,7 +56,8 @@ export default Home = () => {
             X:{characterPosition.x} Y:{characterPosition.y}
           </p>
           <label>room</label>
-          <p>{currentRoom.connectedRooms}</p>
+          <p>{currentRoom.id}</p>
+          <p>{currentRoom.connectedRooms.room}</p>
           <p>
             width:{currentRoom.width} length:{currentRoom.length}
           </p>
