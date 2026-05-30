@@ -3,7 +3,7 @@ let dungeonDB = {
     id: 1,
     width: 5,
     length: 5,
-    connectedRooms: [2, 3],
+    connectedRooms: [{ room: 2 }, { room: 3 }],
   },
   2: {
     id: 2,
@@ -13,8 +13,8 @@ let dungeonDB = {
   },
   3: {
     id: 3,
-    width: 5,
-    length: 5,
+    width: 4,
+    length: 4,
     connectedRooms: [1],
   },
 };
