@@ -3,6 +3,7 @@ import {roomDB} from "./dungeonDB/dungeonDB.js"
 import Acimage from "./Acimage.js";
 import ArmorDisplay from "./ArmorDisplay.js";
 import WeaponDisplay from "./WeaponDisplay.js";
+import "./css/rooms.css";
 
 export default Home = () => {
   const [currentView, setCurrentView] = useState(null);
@@ -51,6 +52,7 @@ export default Home = () => {
       </div>
       <div className="main">
         <div className="board">
+          <div class="viewport">d</div>
           <p>board</p>
           <p>
             X:{characterPosition.x} Y:{characterPosition.y}
