@@ -1,8 +1,8 @@
 export default Room = () => {
   const style = {
-    .viewport: {
-        border: 1px solid darkgreen;
+    viewport: {
+        border: "3px solid darkgreen"
     }
   };
-  return <div className="viewport"></div>;
+  return <div className="styule.viewport">Y</div>;
 };
