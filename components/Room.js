@@ -17,13 +17,16 @@ export default Room = (width = 5, length = 5, height = 3) => {
       transition: "transform 0.1s ease-out",
     },
     floor: {
-        backgroundColor: "white",
-        height: "600px",
-        transform: "rotateX(90deg) translateZ(-200px)",
-      }
+      backgroundColor: "white",
+      height: "600px",
+      transform: "rotateX(45deg), translateZ(-100px)",
+    },
   };
-  return <div style={style.viewport}><div style={style.room}>
-    <div style={style.floor}>Y</div>
+  return (
+    <div style={style.viewport}>
+      <div style={style.room}>
+        <div style={style.floor}>Y</div>
+      </div>
     </div>
-    </div>
+  );
 };
