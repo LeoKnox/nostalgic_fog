@@ -18,8 +18,8 @@ export default Room = (width = 5, length = 5, height = 3) => {
     },
     floor: {
       backgroundColor: "white",
-      height: "600px",
-      transform: "rotateX(45deg), translateZ(-100px)",
+      height: "300px",
+      transform: "rotateX(90deg), translateZ(-200px)",
     },
   };
   return (
