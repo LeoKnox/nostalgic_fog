@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import {roomDB} from "./dungeonDB/dungeonDB.js"
 import Acimage from "./Acimage.js";
 import ArmorDisplay from "./ArmorDisplay.js";
+import Room from "./Room.js";
 import WeaponDisplay from "./WeaponDisplay.js";
 import "./css/rooms.css";
 
@@ -51,8 +52,9 @@ export default Home = () => {
         <div className="navbar">Home</div>
       </div>
       <div className="main">
+        <Room />
         <div className="board">
-          <div class="viewport">d</div>
+
           <p>board</p>
           <p>
             X:{characterPosition.x} Y:{characterPosition.y}
