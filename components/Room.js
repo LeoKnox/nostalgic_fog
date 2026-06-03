@@ -24,14 +24,15 @@ export default Room = (width = 5, length = 5, height = 3) => {
     backWall: {
       backgroundColor: "red",
       color: "#333",
-      transform: "translateZ(100px)",
+      transform: "translateZ(-200px)",
       border: "2px solid #ccc",
     },
   };
   return (
     <div style={style.viewport}>
       <div style={style.room}>
-        <div style={style.floor}>Y</div>
+        <div style={style.floor}></div>
+        <div style={style.backWall}>Y</div>
       </div>
     </div>
   );
