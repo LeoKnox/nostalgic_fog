@@ -41,8 +41,12 @@ export default Room = (width = 5, length = 5, height = 3) => {
   return (
     <div style={style.viewport}>
       <div style={style.room}>
-        <div className={`${style.face} ${style.floor}`}></div>
-        <div className={`${style.face} ${style.backWall}`}>Y</div>
+        <div style={style.face} style={style.floor}>
+          X
+        </div>
+        <div style={style.face} style={style.backWall}>
+          Y
+        </div>
       </div>
     </div>
   );
