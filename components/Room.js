@@ -21,6 +21,12 @@ export default Room = (width = 5, length = 5, height = 3) => {
       height: "300px",
       transform: "rotateX(90deg), translateZ(-200px)",
     },
+    backWall: {
+      backgroundColor: "red",
+      color: "#333",
+      transform: "translateZ(100px)",
+      border: "2px solid #ccc",
+    },
   };
   return (
     <div style={style.viewport}>
