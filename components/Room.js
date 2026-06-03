@@ -24,7 +24,8 @@ export default Room = (width = 5, length = 5, height = 3) => {
     backWall: {
       backgroundColor: "red",
       color: "#333",
-      transform: "translateZ(-200px)",
+      height: "300px",
+      transform: "translateZ(-300px)",
       border: "2px solid #ccc",
     },
   };
