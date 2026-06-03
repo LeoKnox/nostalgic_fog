@@ -3,7 +3,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
     viewport: {
       border: "3px solid darkgreen",
       backgroundColor: "gray",
-      width: "500px",
+      width: "600px",
       height: "400px",
       perspective: "1200px",
       perspectiveOrigin: "50% 30%",
@@ -18,7 +18,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
     },
     floor: {
       backgroundColor: "white",
-      height: "300px",
+      height: "600px",
       transform: "rotateX(90deg), translateZ(-200px)",
     },
     backWall: {
