@@ -16,9 +16,18 @@ export default Room = (width = 5, length = 5, height = 3) => {
       transformStyle: "preserve-3d",
       transition: "transform 0.1s ease-out",
     },
+    face: {
+      position: "absolute",
+      width: "600px",
+      height: "400px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backfaceVisibility: "visible",
+    },
     floor: {
       backgroundColor: "white",
-      height: "600px",
+      height: "300px",
       transform: "rotateX(90deg), translateZ(-200px)",
     },
     backWall: {
@@ -32,8 +41,8 @@ export default Room = (width = 5, length = 5, height = 3) => {
   return (
     <div style={style.viewport}>
       <div style={style.room}>
-        <div style={style.floor}></div>
-        <div style={style.backWall}>Y</div>
+        <div className={`style=${style.face} style=${style.floor}`}></div>
+        <div className={`style=${style.face} style=${style.backWall}`}>Y</div>
       </div>
     </div>
   );
