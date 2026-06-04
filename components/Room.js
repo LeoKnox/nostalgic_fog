@@ -18,6 +18,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
     },
     face: {
       position: "absolute",
+      backgroundColor: "blue",
       width: "600px",
       height: "400px",
       display: "flex",
@@ -29,7 +30,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
       backgroundColor: "white",
       position: "absolute",
       height: "300px",
-      width: "600px",
+      width: "300px",
       height: "400px",
       transform: "rotateX(-40deg), translateZ(-400px)",
     },
@@ -48,7 +49,6 @@ export default Room = (width = 5, length = 5, height = 3) => {
       <div style={style.room}>
         <div style={style.face}>
           <div style={style.floor}>X</div>
-          <div style={style.backWall}>Y</div>
         </div>
       </div>
     </div>
