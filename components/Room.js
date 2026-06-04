@@ -27,13 +27,15 @@ export default Room = (width = 5, length = 5, height = 3) => {
     },
     floor: {
       backgroundColor: "white",
+      position: "absolute",
       height: "300px",
       width: "600px",
       height: "400px",
-      transform: "rotateX(-90deg), translateZ(-400px)",
+      transform: "rotateX(-40deg), translateZ(-400px)",
     },
     backWall: {
       backgroundColor: "red",
+      position: "absolute",
       color: "#333",
       width: "600px",
       height: "400px",
