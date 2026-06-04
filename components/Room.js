@@ -29,24 +29,22 @@ export default Room = (width = 5, length = 5, height = 3) => {
       backgroundColor: "white",
       height: "300px",
       //transform: "translateZ(-300px)",
-      transform: "rotateX(90deg), translateZ(-200px)",
+      transform: "rotateX(-90deg), translateZ(-400px)",
     },
     backWall: {
       backgroundColor: "red",
       color: "#333",
       height: "300px",
-
+      transform: "translateZ(-300px)",
       border: "2px solid #ccc",
     },
   };
   return (
     <div style={style.viewport}>
       <div style={style.room}>
-        <div style={style.face} style={style.floor}>
-          X
-        </div>
-        <div style={style.face} style={style.backWall}>
-          Y
+        <div style={style.face}>
+          <div style={style.floor}>X</div>
+          <div style={style.backWall}>Y</div>
         </div>
       </div>
     </div>
