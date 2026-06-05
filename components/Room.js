@@ -32,7 +32,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
       height: "300px",
       width: "200px",
       height: "200px",
-      transform: "rotateX(-90deg), translateZ(20px)",
+      transform: "rotateX(-80deg), translateZ(100px)",
     },
     backWall: {
       backgroundColor: "red",
