@@ -31,14 +31,14 @@ export default Room = (width = 5, length = 5, height = 3) => {
       position: "absolute",
       height: "300px",
       width: "200px",
-      height: "200px",
-      transform: "rotateX(-80deg), translateZ(100px)",
+
+      transform: "rotateX(-80deg), translateZ(`1000px)",
     },
     backWall: {
       backgroundColor: "red",
       position: "absolute",
-      width: "600px",
-      height: "400px",
+      width: "200px",
+      height: "200px",
       transform: "translateZ(-300px)",
       border: "2px solid #ccc",
     },
@@ -48,6 +48,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
       <div style={style.room}>
         <div>
           <div style={style.floor}>X</div>
+          <div style={style.backWall}>Y</div>
         </div>
       </div>
     </div>
