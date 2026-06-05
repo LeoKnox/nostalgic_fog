@@ -20,7 +20,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
       position: "absolute",
       backgroundColor: "blue",
       width: "600px",
-      height: "400px",
+      height: "800px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -32,14 +32,14 @@ export default Room = (width = 5, length = 5, height = 3) => {
       height: "300px",
       width: "200px",
 
-      transform: "rotateX(-80deg), translateZ(`1000px)",
+      transform: "rotateX(-80deg), translateZ(`800px)",
     },
     backWall: {
       backgroundColor: "red",
       position: "absolute",
       width: "200px",
       height: "200px",
-      transform: "translateZ(-300px)",
+      transform: "translateZ(00px)",
       border: "2px solid #ccc",
     },
   };
@@ -47,8 +47,8 @@ export default Room = (width = 5, length = 5, height = 3) => {
     <div style={style.viewport}>
       <div style={style.room}>
         <div>
-          <div style={style.floor}>X</div>
           <div style={style.backWall}>Y</div>
+          <div style={style.floor}>X</div>
         </div>
       </div>
     </div>
