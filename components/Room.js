@@ -17,6 +17,7 @@ export default Room = (width = 5, length = 5, height = 3) => {
       transition: "transform 0.1s ease-out",
       perspective: "800px",
       perspectiveOrigin: "center center",
+      transform: 'translateX(100px) rotateX(20deg) rotateY(20deg) rotateZ(-5deg)'
     },
     face: {
       position: "absolute",
@@ -33,14 +34,14 @@ export default Room = (width = 5, length = 5, height = 3) => {
       position: "absolute",
       height: "300px",
       width: "200px",
-      transform: "translateZ(-200px) rotateX(80deg)",
+      transform: "translateZ(-200px) rotateX(90deg)",
     },
     backWall: {
       backgroundColor: "red",
       position: "absolute",
       width: "200px",
       height: "120px",
-      transform: "translateZ(00px) rotateX(10deg)",
+      transform: "translateZ(00px)",
       border: "2px solid #ccc",
     },
   };
