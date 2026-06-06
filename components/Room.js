@@ -17,7 +17,8 @@ export default Room = (width = 5, length = 5, height = 3) => {
       transition: "transform 0.1s ease-out",
       perspective: "800px",
       perspectiveOrigin: "center center",
-      transform: 'translateX(100px) rotateX(20deg) rotateY(20deg) rotateZ(-5deg)'
+      transform:
+        "translateX(100px) rotateX(-40deg) rotateY(20deg) rotateZ(0deg)",
     },
     face: {
       position: "absolute",
