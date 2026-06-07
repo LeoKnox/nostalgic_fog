@@ -1,45 +1,59 @@
-import { N5Kanji } from "./N5Kanji.js";
-import { useState } from "react";
-
-export default Home = () => {
-  const [kanjiList, setKanjiList] = useState([]);
+export default Room = (width = 5, length = 5, height = 3) => {
+  const style = {
+    viewport: {
+      border: "3px solid darkgreen",
+      backgroundColor: "gray",
+      width: "600px",
+      height: "400px",
+      perspective: "1200px",
+      perspectiveOrigin: "50% 30%",
+      overflow: "hidden",
+    },
+    room: {
+      position: "relative",
+      width: "100%",
+      height: "100%",
+      transformStyle: "preserve-3d",
+      transition: "transform 0.1s ease-out",
+      perspective: "800px",
+      perspectiveOrigin: "center center",
+      transform:
+        "translateX(10px) rotateX(-40deg) rotateY(20deg) rotateZ(0deg)",
+    },
+    face: {
+      position: "absolute",
+      backgroundColor: "blue",
+      width: "600px",
+      height: "800px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backfaceVisibility: "visible",
+    },
+    floor: {
+      backgroundColor: "lightBlue",
+      position: "absolute",
+      height: "300px",
+      width: "200px",
+      transform: "translateX(200px) rotateX(90deg)",
+    },
+    backWall: {
+      backgroundColor: "red",
+      position: "absolute",
+      width: "300px",
+      height: "120px",
+      transform: "translateZ(00px)",
+      border: "2px solid #ccc",
+    },
+  };
   return (
-    <>
-      <h1>Home</h1>
-      <div>
-        <h2>家</h2>
-        <p>{kanjiList}</p>
-        <table>
-          <tbody>
-            {N5Kanji.map((row, kanjiId) => (
-              <tr>
-                <td>
-                  <input
-                    type="checkbox"
-                    value={kanjiId}
-                    onClick={() => setKanjiList([...kanjiList, kanjiId])}
-                  />
-                  {kanjiId}
-                </td>
-                {Object.entries(row).map((data) => (
-                  <td
-                    key={data}
-                    style={{
-                      border: "1px solid #ddd",
-                      padding: "8px",
-                      textAlign: "left",
-                      fontWeight: "bold",
-                      fontSize: "1em",
-                    }}
-                  >
-                    {data[0]}:{data[1]}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div style={style.viewport}>
+      <div style={style.room}>
+        <div>
+          <div style={style.backWall}>Y</div>
+          <div style={style.floor}>X</div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
