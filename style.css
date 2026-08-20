@@ -1,111 +1,117 @@
-progress {
-  accent-color: red;
-}
 body {
-  background-color: rgb(62, 70, 78);
-}
-.acParent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 10vh;
-}
-.acParent svg {
-  width: 200px;
-  height: 200px;
-}
-.armorClass {
-  top: 0;
-
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: white;
-}
-
-.acBackground {
-  position: absolute;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background: linear-gradient(to bottom right, red, blue, green);
-
-  width: 90vh;
-  height: 90vh;
-  background: #132746;
-  clip-path: circle();
-  clip-path: square();
+  background-color: tan;
 }
 
 .App {
   font-family: sans-serif;
   text-align: center;
-  min-height: 100vh;
+}
+
+.drawingPractice {
+  background-color: beige;
+  padding: 5px;
+  height: 5em;
+}
+.kanjiPractice {
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.kanjiButton {
+  background-color: darkred;
+  border-radius: 5px;
+  color: gold;
+  border: 1px solid gold;
+  padding: 0.3em;
+  text-decoration: none;
+}
+
+.kanjiRow {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 80%;
 }
 
-.head {
-  border-radius: 15px 15px 0 0;
-  width: 90%;
-  height: auto;
-  margin: auto;
-  color: lightgray;
-  background-color: darkblue;
-}
-
-.navbar {
-  width: 100px;
-  padding: 10px;
-  background-color: gray;
-  margin-left: auto;
-}
-
-.main {
-  color: yellow;
-  background-color: slateblue;
-  display: flex;
-  flex-grow: 1;
-  width: 90%;
-  margin: auto;
-}
-
-.board {
-  width: 70%;
-}
-
-.side {
-  flex: 2;
-  background-color: blue;
-}
-
-.inventory {
-  height: 90%;
-}
-
-.inventoryNav {
-  box-shadow: 0 0 10px 5px darkblue;
-  border-radius: 15px;
-  border: 5px solid blue;
-  margin: 10px;
-  position: relative;
-  margin-left: auto;
-  height: auto;
-  color: lightgray;
-  background-color: darkblue;
-  padding: 5vmin;
-}
-
-.overlay_display {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
+.kanjiQuiz {
+  display: grid;
+  width: 95%;
+  height: 70vh;
+  padding: 6px;
+  grid-template-columns: repeat(3, 18vh);
+  grid-template-rows: repeat(2, 12vh);
+  align-content: center;
   justify-content: center;
+  gap: 6px;
+  place-items: center;
+  border-radius: 100%;
+}
+
+.practiceSelect {
+  color: gold;
+  background-color: brown;
+}
+
+.quizBackground {
+  display: grid;
+  width: 95%;
+  height: 70vh;
   align-items: center;
-  z-index: 10;
-  backdrop-filter: blur(4px);
+  justify-content: center;
+  background: lemonchiffon;
+  border: 3px solid darkgreen;
+  border-radius: 100%;
+}
+
+.quizBox {
+  display: flex;
+  width: 13vh;
+  height: 10vh;
+  color: blue;
+  border: goldenrod 3px solid;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectTarget {
+  background-color: yellow;
+  font-size: 2em;
+  width: 8em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border: 3px solid gold;
+}
+
+.kanjiColumn {
+  color: darkgreen;
+  background-color: #ccff99;
+  flex: 0 0 33%;
+  box-sizing: border-box;
+  width: 25%;
+  height: 20vh;
+  border: 10px solid;
+  broder-radius: 20px;
+  border-image: linear-gradient(
+      to bottom,
+      #506b3c 0%,
+      #88a564 50%,
+      #506b3c 100%
+    )
+    1;
+}
+
+.kanjiColumn input[type="checkbox"] {
+  appearance: none;
+  margin-bottom: 0;
+  width: 1em;
+  height: 1em;
+  background: brown;
+}
+
+.kanjiColumn input[type="checkbox"]:checked {
+  appearance: revert;
+  accent-color: gold;
 }
